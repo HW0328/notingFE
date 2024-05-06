@@ -8,6 +8,7 @@ const ViewComments = ({ be, postId, user }) => {
     const [comments, SetComments] = useState([]);
     const [writer, SetWriter] = useState(user);
     const [content, SetContent] = useState('');
+    const [writeComment, SetWriteComment] = useState('');
 
     // view 기능
     useEffect(()=>{
@@ -46,6 +47,21 @@ const ViewComments = ({ be, postId, user }) => {
     }
     }
 
+    useEffect(() => {
+        if (user !== '') {
+            SetWriteComment(
+                <div id="cmt_write">
+                    <form onSubmit={upload} method="POST">
+                        <input type="text" placeholder="Please input content." onChange={(e) => SetContent(e.target.value)} value={content} /><br />
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            );
+        } else {
+            SetWriteComment(null); // 댓글 작성창을 숨김
+        }
+    }, [user]);
+
     return (
         <div>
             {/* 댓글 view */}
@@ -58,17 +74,9 @@ const ViewComments = ({ be, postId, user }) => {
             </div>
 
             {/* 댓글 write */}
-            {user === '' ? (
-                <div></div>
-            ) : (
-                <div id="cmt_write">
-                    <form onSubmit={upload} method="POST">
-                    {/* <input type="text" placeholder="Please input name." value={writer} onChange={(e) => SetWriter(e.target.value)} /><br /> */}
-                    <input type="text" placeholder="Please input content." onChange={(e) => SetContent(e.target.value)} value={content} /><br />
-                    <button type="submit">Submit</button>
-                    </form>
-                </div>
-            )}
+            <div>
+                {writeComment}
+            </div>
 
         </div>
     )
