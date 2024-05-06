@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'WAGURITTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'WAGURITTF';
+    padding: 0;
+    margin: 0;
+}
+
+#mainapp{
+    padding: 30px;
+}
+
+nav{
+    background: gray;
+    padding: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > span {
+    padding-left: 5px;
+}
+  
+.login {
+    margin-left: auto;
+}
+
+
+
+
+button{
+    font-family: 'WAGURITTF';
+    width:120px;
+	height: 40px;
+	color:#fff;
+	background: #004fff;
+	font-size: 16px;
+	border:none;
+	border-radius: 20px;
+	box-shadow: 0 4px 16px rgba(0,79,255,0.3);
+	transition:0.3s;
+	position: absolute;
+	/* top:50%; */
+	transform: translate(-50%,-50%);
+    margin-left: 100px;
+    margin-top: 25px;
+}
+/* button:focus {
+	outline:0;
+} */
+button:hover{
+	background: rgba(0,79,255,0.9);
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0,79,255,0.6);
+}
+
+
+
+/*input css*/
+
+textarea,input{
+  font-family: 'WAGURITTF';
+  padding: 10px;
+  box-sizing: border-box;
+  border: solid 2px #1E90FF;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: both;
+}
+
+#signup{
+    width: 250px;
+}
