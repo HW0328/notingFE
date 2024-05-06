@@ -9,7 +9,8 @@ import SignUp from "./components/signUp";
 
 
 const App = () => {
-  const be = "http://127.0.0.1:8000";
+  const be = "https://port-0-notingbe-1h3rc2alsfrkt4x.sel5.cloudtype.app/";
+
   const [page, changePage] = useState(null);
   
   
