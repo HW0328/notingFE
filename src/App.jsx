@@ -10,7 +10,10 @@ import SignUp from "./components/signUp";
 
 const App = () => {
   const be = "https://port-0-notingbe-1h3rc2alsfrkt4x.sel5.cloudtype.app/";
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
   const [page, changePage] = useState(null);
   
   
