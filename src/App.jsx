@@ -54,7 +54,7 @@ const App = () => {
       <nav>
         <span onClick={() => { changePage(<Home be={be} cp={changePage} user={user}/>) }}>Home</span>
         {isLogined === 0 ? (<div></div>) : (<span onClick={() => { changePage(<New be={be} cp={changePage} user={user} />) }}>New</span>)}
-        <span onClick={() => { changePage(<Lunch be={be} cp={changePage} user={user} />) }}>Lunch</span>
+        
         {isLogined === 0 ? (
           <div className="login">
             <span className='login' onClick={() => { changePage(<SignUp be={be} cp={changePage} />) }}>Sign up</span>&nbsp;&nbsp;&nbsp;
